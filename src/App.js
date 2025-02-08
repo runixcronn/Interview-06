@@ -68,7 +68,7 @@ const Quiz = ({ questions }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300">
       {showScore ? (
         <div className="text-center p-6 bg-white rounded-lg shadow-md">
           <div className="text-2xl font-bold mb-4">
@@ -79,7 +79,7 @@ const Quiz = ({ questions }) => {
         <div className="w-full max-w-xl p-6 bg-white rounded-lg shadow-md">
           <div className="mb-4">
             <div className="text-lg font-semibold">
-              Question {currentQuestion + 1}/{questions.length}
+              Soru {currentQuestion + 1}/{questions.length}
             </div>
             <div className="text-xl mt-2">
               {questions[currentQuestion].question}
@@ -90,7 +90,7 @@ const Quiz = ({ questions }) => {
               <button
                 key={index}
                 onClick={() => handleAnswerButtonClick(index)}
-                className="py-2 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
+                className="py-2 px-4 border border-green-900 bg-green-500 text-white rounded-lg hover:bg-green-700 transition duration-300"
               >
                 {answer}
               </button>
